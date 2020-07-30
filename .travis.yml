@@ -15,7 +15,7 @@ after_script:
   - git config user.email "${U_EMAIL}"
   - git add -A
   - git commit -m 'deploy'
-  - git push -f --quiet "https://${GH_REF}" master:${P_BRANCH}
+  - git push -f --quiet ${GH_REF} master:${P_BRANCH}
 
 branches:
   only:
