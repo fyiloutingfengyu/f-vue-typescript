@@ -5,6 +5,11 @@ node_js:
 cache: npm
 
 script: npm run build
+after_script:
+  - git init
+  - git add -A
+  - git commit -m 'deploy'
+  - git push -f git@github.com:fyiloutingfengyu/f-vue-typescript.git master:gh-pages
 
 deploy:
 provider: pages
